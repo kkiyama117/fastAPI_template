@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  main:
+    restart: always
+    tty: true
+    stdin_open: true
+    env_file:
+      - .env.production
+    build:
+      context: .
+      command: uvicorn portfolio_api.app:app --host 0.0.0.0
+    ports:
+      - "8000:8000"

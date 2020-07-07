@@ -1,0 +1,28 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://help.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+
+version: 2
+updates:
+  - package-ecosystem: "pip" # See documentation for possible values
+    directory: "/" # Location of package manifests
+
+    assignees:
+      - "kkiyama117"
+    # Include a list of updated dependencies
+    # with a prefix determined by the dependency group
+    commit-message:
+      prefix: "pip prod"
+      prefix-development: "pip dev"
+      include: "scope"
+    reviewers:
+      - "unimap/apiweb"
+    schedule:
+      # 会議前の邪魔にならない時間が良さそう(会議で検討も出来る)
+      interval: "weekly"
+      day: "friday"
+      time: "16:15"
+      # Use Japan Standard Time (UTC +09:00)
+      timezone: "Asia/Tokyo"
+      

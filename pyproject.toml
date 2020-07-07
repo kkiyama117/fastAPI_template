@@ -1,0 +1,25 @@
+# Used by black
+# https://github.com/psf/black#pyprojecttoml
+[tool.autopep8]
+max_line_length = 120
+ignore = ["E203", "E501", "W503", "W504"]
+
+[tool.black]
+# `tox.ini` の `flake8` の設定に合わせる
+line-length = 120
+target-version = ['py37']
+exclude = '''
+(
+      \.eggs
+    | \.git
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | \venv
+    | _build
+    | build
+    | dist
+    | .pytest_cache
+)
+'''
+
