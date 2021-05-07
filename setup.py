@@ -9,7 +9,7 @@ from codecs import open
 from setuptools import setup, find_packages
 
 # requires.
-requires = ["Cerberus==1.3.3", "fastapi", "sqlalchemy", "uvicorn", "firebase-admin", "databases[sqlite]"]
+requires = ["Cerberus==1.3.4", "fastapi", "sqlalchemy", "uvicorn", "firebase-admin", "databases[sqlite]"]
 
 with open("README.md", "r", "utf-8") as f:
     readme = f.read()
